@@ -18,7 +18,9 @@
     "lint:travis": "travis-lint .travis.yml",
     "lint:sensitive": "ban",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
-    "test:integration": "cucumber-js test/integration --require-module @babel/register --format-options '{\"snippetInterface\": \"async-await\"}'"
+    "test:integration": "cucumber-js test/integration --require-module @babel/register --format-options '{\"snippetInterface\": \"async-await\"}'",
+    "predeploy": "run-s build",
+    "deploy": "netlify deploy --site-id $NETLIFY_SITE_ID --access-token $NETLIFY_ACCESS_TOKEN --path ./lib"
   },
   "config": {
     "commitizen": {
@@ -40,6 +42,7 @@
     "html-webpack-plugin": "3.2.0",
     "husky": "1.1.4",
     "mustache-loader": "1.4.1",
+    "netlify-cli": "2.2.1",
     "npm-run-all": "4.1.3",
     "raw-loader": "0.5.1",
     "remark-cli": "6.0.1",
