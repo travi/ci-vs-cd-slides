@@ -57,8 +57,12 @@ export default function Presentation() {
 
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">
         <BlockQuote>
-          <Quote>Example Quote</Quote>
-          <Cite>Author</Cite>
+          <Quote>
+            Make it work,<br />
+            make it right,<br />
+            make it fast.
+          </Quote>
+          <Cite>Kent Beck</Cite>
         </BlockQuote>
       </Slide>
 
