@@ -4,6 +4,7 @@ import {
   Cite,
   Deck,
   Heading,
+  Link,
   ListItem,
   List,
   Quote,
@@ -24,6 +25,7 @@ const theme = createTheme({
 export default function Presentation() {
   return (
     <Deck transition={['zoom', 'slide']} transitionDuration={500} theme={theme}>
+
       <Slide transition={['zoom']} bgColor="primary">
         <Heading size={1} fit lineHeight={1} textColor="secondary">
           CI vs CD
@@ -32,6 +34,7 @@ export default function Presentation() {
           the unexpected conflict
         </Text>
       </Slide>
+
       <Slide transition={['fade']} bgColor="tertiary">
         <Heading size={6} textColor="primary" caps>Typography</Heading>
         <Heading size={1} textColor="secondary">Heading 1</Heading>
@@ -41,6 +44,7 @@ export default function Presentation() {
         <Heading size={5} textColor="secondary">Heading 5</Heading>
         <Text size={6} textColor="secondary">Standard text</Text>
       </Slide>
+
       <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
         <Heading size={6} textColor="secondary" caps>Standard List</Heading>
         <List>
@@ -50,12 +54,38 @@ export default function Presentation() {
           <ListItem>Item 4</ListItem>
         </List>
       </Slide>
+
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">
         <BlockQuote>
           <Quote>Example Quote</Quote>
           <Cite>Author</Cite>
         </BlockQuote>
       </Slide>
+
+      <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+        <Heading size={1} fit>
+          Matt Travi
+        </Heading>
+
+        <List>
+          <ListItem>
+            <Link textColor="white" target="_blank" href="https://matt.travi.org">
+              matt.travi.org
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link textColor="white" target="_blank" href="https://twitter.com/mtravi">
+              twitter.com/mtravi
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link textColor="white" target="_blank" href="https://ci-vs-cd.travi.org">
+              ci-vs-cd.travi.org
+            </Link>
+          </ListItem>
+        </List>
+      </Slide>
+
     </Deck>
   );
 }
