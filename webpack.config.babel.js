@@ -78,7 +78,7 @@ export default function (env = 'development') {
 
     mode: env,
     optimization: {
-      minimize: true
+      minimize: ifProduction(true, false)
     }
   };
 }
