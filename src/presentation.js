@@ -19,20 +19,17 @@ const theme = createTheme({
   secondary: '#1F2022',
   tertiary: '#03A9FC',
   quaternary: '#CECECE'
-}, {
-  primary: 'Montserrat',
-  secondary: 'Helvetica'
 });
 
 export default function Presentation() {
   return (
     <Deck transition={['zoom', 'slide']} transitionDuration={500} theme={theme}>
       <Slide transition={['zoom']} bgColor="primary">
-        <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-          Spectacle Boilerplate
+        <Heading size={1} fit lineHeight={1} textColor="secondary">
+          CI vs CD
         </Heading>
-        <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-          open the presentation/index.js file to get started
+        <Text margin="10px 0 0" textColor="tertiary" size={1} fit caps bold>
+          the unexpected conflict
         </Text>
       </Slide>
       <Slide transition={['fade']} bgColor="tertiary">
