@@ -3,12 +3,14 @@ import {
   Appear,
   BlockQuote,
   Cite,
+  Code,
   Deck,
   Heading,
   Link,
   ListItem,
   List,
   Quote,
+  S,
   Slide,
   Text
 } from 'spectacle';
@@ -22,6 +24,7 @@ const theme = createTheme({
   tertiary: '#03A9FC',
   quaternary: '#CECECE'
 });
+const codeStyle = {fontSize: '1.25rem', padding: 0, color: 'white'};
 
 export default function Presentation() {
   return (
@@ -54,6 +57,70 @@ export default function Presentation() {
           <ListItem>Item 3</ListItem>
           <ListItem>Item 4</ListItem>
         </List>
+      </Slide>
+
+      <Slide transition={['slide']}>
+        <Heading size={1} fit>
+          First, some terminology...
+        </Heading>
+        <List>
+          <Appear>
+            <ListItem>
+              Continuous Integration
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Continuous Delivery
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Continuous Deployment
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Integration
+        </Heading>
+        <Heading size={1} fit>
+          favoring code in
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          over long-lived branches
+        </Heading>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Delivery
+        </Heading>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          is always deployable
+        </Heading>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Deployment
+        </Heading>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          <S type="italic">is</S>
+          {' '}
+          production
+        </Heading>
       </Slide>
 
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">
