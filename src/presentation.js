@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Appear,
   BlockQuote,
   Cite,
   Deck,
@@ -58,13 +59,21 @@ export default function Presentation() {
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">
         <BlockQuote>
           <Quote>
-            Make it work,
+            <Appear>
+              <span>Make it work,</span>
+            </Appear>
             <br />
-            make it right,
+            <Appear>
+              <span>make it right,</span>
+            </Appear>
             <br />
-            make it fast.
+            <Appear>
+              <span>make it fast.</span>
+            </Appear>
           </Quote>
-          <Cite>Kent Beck</Cite>
+          <Appear>
+            <Cite>Kent Beck</Cite>
+          </Appear>
         </BlockQuote>
       </Slide>
 
