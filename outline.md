@@ -9,12 +9,14 @@
 * Prevent any defects from being deployed to production
 * "Defects" assumed to be worst case where users cant use the app at all
 
+* Deploy at 5:00 on Friday
+
 ## Confidence
 * Engineering 
 
 * As engineers, its easy to jump to solutions that involve automation
-* Automation does have a place
-* Focus on the goal of having confidence rather than how we get there
+  * Automation does have a place
+  * Focus on the goal of having confidence rather than how we get there
 * Automation, by itself, doesn't overcome the human fear
 
 ## Focusing on Automation/Metrics over Confidence
@@ -37,6 +39,7 @@
     automating if it is valuable enough to your project
 
 ## Continuous Integration
+* Integration of code, not an automated build/test server
 
 * Harder challenge
 
