@@ -6,6 +6,7 @@ import {
   Code,
   Deck,
   Heading,
+  Image,
   Link,
   ListItem,
   List,
@@ -15,6 +16,7 @@ import {
   Text
 } from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default';
+import preloader from 'spectacle/lib/utils/preloader';
 
 require('normalize.css');
 
@@ -25,6 +27,11 @@ const theme = createTheme({
   quaternary: '#CECECE'
 });
 const codeStyle = {fontSize: '1.25rem', padding: 0, color: 'white'};
+const images = {
+  testInProduction: require('../assets/test-in-production.jpg')
+};
+
+preloader(images);
 
 export default function Presentation() {
   return (
@@ -142,6 +149,10 @@ export default function Presentation() {
             <Cite>Kent Beck</Cite>
           </Appear>
         </BlockQuote>
+      </Slide>
+
+      <Slide transition={['fade']} bgColor="quaternary" textColor="primary">
+        <Image src={images.testInProduction.replace('/', '')} width="60%" />
       </Slide>
 
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">

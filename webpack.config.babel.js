@@ -58,6 +58,24 @@ export default function (env = 'development') {
         {
           test: /\.mustache$/,
           loader: 'mustache-loader'
+        },
+        {
+          test: /\.(png|jpg|gif)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                limit: 8192,
+                publicPath: '..//'
+              }
+            },
+            {
+              loader: 'img-loader',
+              options: {
+                progressive: true
+              }
+            }
+          ]
         }
       ]
     },
