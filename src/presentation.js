@@ -46,6 +46,107 @@ export default function Presentation() {
         </Text>
       </Slide>
 
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} fit lineHeight={1} textColor="tertiary">
+          CI / CD
+        </Heading>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
+          In Theory:
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          complementary halves of the same goal
+        </Heading>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
+          In Practice:
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          human influence can make them incompatible
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Fear</Heading>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
+          Product:
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Defects deployed to production</ListItem>
+          <ListItem>Defects assumed to make application unusable</ListItem>
+        </List>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
+          Engineering:
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Dirty Code</ListItem>
+          <ListItem>Support Calls</ListItem>
+        </List>
+      </Slide>
+
+      <Slide transition={['fade']}>
+        <Heading size={1} fit>
+          First, some terminology...
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Integration
+        </Heading>
+        <Heading size={1} fit>
+          favoring code in
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          over long-lived branches
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Delivery
+        </Heading>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          is always deployable
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Deployment
+        </Heading>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          <S type="italic">is</S>
+          {' '}
+          production
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Confidence</Heading>
+      </Slide>
+
       <Slide transition={['fade']} bgColor="tertiary">
         <Heading size={6} textColor="primary" caps>Typography</Heading>
         <Heading size={1} textColor="secondary">Heading 1</Heading>
@@ -64,70 +165,6 @@ export default function Presentation() {
           <ListItem>Item 3</ListItem>
           <ListItem>Item 4</ListItem>
         </List>
-      </Slide>
-
-      <Slide transition={['slide']}>
-        <Heading size={1} fit>
-          First, some terminology...
-        </Heading>
-        <List>
-          <Appear>
-            <ListItem>
-              Continuous Integration
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              Continuous Delivery
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              Continuous Deployment
-            </ListItem>
-          </Appear>
-        </List>
-      </Slide>
-
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Integration
-        </Heading>
-        <Heading size={1} fit>
-          favoring code in
-          {' '}
-          <Code style={codeStyle}>
-            master
-          </Code>
-          {' '}
-          over long-lived branches
-        </Heading>
-      </Slide>
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Delivery
-        </Heading>
-        <Heading size={1} fit>
-          <Code style={codeStyle}>
-            master
-          </Code>
-          {' '}
-          is always deployable
-        </Heading>
-      </Slide>
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Deployment
-        </Heading>
-        <Heading size={1} fit>
-          <Code style={codeStyle}>
-            master
-          </Code>
-          {' '}
-          <S type="italic">is</S>
-          {' '}
-          production
-        </Heading>
       </Slide>
 
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">
