@@ -46,8 +46,8 @@ export default function Presentation() {
         </Text>
       </Slide>
 
-      <Slide transition={['slide']} bgColor="secondary">
-        <Heading size={1} fit lineHeight={1} textColor="tertiary">
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} fit lineHeight={1} textColor="primary">
           CI / CD
         </Heading>
       </Slide>
@@ -147,24 +147,168 @@ export default function Presentation() {
         <Heading size={1} textColor="primary" caps fit>Confidence</Heading>
       </Slide>
 
-      <Slide transition={['fade']} bgColor="tertiary">
-        <Heading size={6} textColor="primary" caps>Typography</Heading>
-        <Heading size={1} textColor="secondary">Heading 1</Heading>
-        <Heading size={2} textColor="secondary">Heading 2</Heading>
-        <Heading size={3} textColor="secondary">Heading 3</Heading>
-        <Heading size={4} textColor="secondary">Heading 4</Heading>
-        <Heading size={5} textColor="secondary">Heading 5</Heading>
-        <Text size={6} textColor="secondary">Standard text</Text>
+      <Slide transition={['fade']} bgColor="secondary">
+        <Heading size={1} textColor="primary" caps>Confidence</Heading>
+
+        <List textColor="tertiary">
+          <ListItem>There is no &quot;right&quot; answer</ListItem>
+          <ListItem>Time &amp; experimentation required</ListItem>
+        </List>
       </Slide>
 
-      <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-        <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-        <List>
-          <ListItem>Item 1</ListItem>
-          <ListItem>Item 2</ListItem>
-          <ListItem>Item 3</ListItem>
-          <ListItem>Item 4</ListItem>
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Honesty</Heading>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary" caps>Be Honest With the Team</Heading>
+
+        <List textColor="tertiary">
+          <ListItem>
+            Issues will make it to production
+
+            <List>
+              <ListItem>While you&apos;re determining your automation coverage</ListItem>
+              <ListItem>Even after you&apos;re confident in your process</ListItem>
+            </List>
+          </ListItem>
         </List>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Trust</Heading>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary" caps>Trust</Heading>
+
+        <List textColor="tertiary">
+          <ListItem>Promise only what is realistic</ListItem>
+          <ListItem>Discuss decisions made about the process</ListItem>
+          <ListItem>Be sure team is aligned about strategy and trade-offs</ListItem>
+        </List>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
+        <Heading size={2} textColor="secondary" caps fit>Delivery</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          is always deployable
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          All necessary verification is done
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          <S type="italic">before</S>
+          {' '}
+          merging to
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          All that remains when approval is gen to deploy
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          is to actually deploy
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
+        <Heading size={2} textColor="secondary" caps fit>Deployment</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          <S type="italic">is</S>
+          {' '}
+          production
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          Every commit to
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          triggers the deployment pipeline
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          Graphic about multiple pipelines processing at the same time?
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous Delivery</Heading>
+        <Heading size={2} textColor="secondary" caps>vs</Heading>
+        <Heading size={1} textColor="primary" caps fit>Continuous Deployment</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary">
+          Goal:
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Strive for Continuous Deployment
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          over Continuous Delivery
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary">
+          Build Confidence through Automation
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Repeatable process makes deploys non-events</ListItem>
+          <ListItem>Team trusts the process</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary">
+          Image about deploying on Friday afternoon?
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary">
+          Mention semantic-release/deployment of packages in addition to apps
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
+        <Heading size={2} textColor="secondary" caps fit>Integration</Heading>
       </Slide>
 
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">
