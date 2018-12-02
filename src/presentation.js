@@ -26,7 +26,11 @@ const theme = createTheme({
   tertiary: '#03A9FC',
   quaternary: '#CECECE'
 });
-const codeStyle = {fontSize: '1.25rem', padding: 0, color: 'white'};
+const codeStyle = {
+  fontSize: '1.25rem',
+  padding: 0,
+  color: 'white'
+};
 const images = {
   testInProduction: require('../assets/test-in-production.jpg')
 };
@@ -309,6 +313,151 @@ export default function Presentation() {
       <Slide transition={['zoom']} bgColor="tertiary">
         <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
         <Heading size={2} textColor="secondary" caps fit>Integration</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Favoring code in
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          over long-lived branches
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Written code, not yet in
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          is
+        </Heading>
+        <Heading size={2} fit caps textColor="tertiary">
+          Debt
+        </Heading>
+      </Slide>
+
+      <Slide transition={['fade']}>
+        <Heading size={1} fit>
+          Clarification about debt...
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Technical Debt Metaphor
+        </Heading>
+        <BlockQuote>
+          <Quote>
+            During the planning or execution of a software project, decisions are made to defer necessary work.
+          </Quote>
+          <Cite><a href="http://wiki.c2.com/?TechnicalDebt">C2 Wiki</a></Cite>
+        </BlockQuote>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Technical Debt
+        </Heading>
+        <BlockQuote>
+          <Quote>
+            A big pile of deferred work can gum up a project
+          </Quote>
+          <Cite><a href="http://wiki.c2.com/?TechnicalDebt">C2 Wiki</a></Cite>
+        </BlockQuote>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Debt Interest
+        </Heading>
+        There is a cost to leaving the debt in place
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Metaphor Confusion
+        </Heading>
+        <BlockQuote>
+          <Quote>
+            ...you could write code poorly with the intention of doing a good job later...
+          </Quote>
+          <Cite><a href="http://wiki.c2.com/?WardExplainsDebtMetaphor">Ward Cunningham</a></Cite>
+        </BlockQuote>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          A
+          {' '}
+          <S type="italic">decision</S>
+          {' '}
+          was made to
+        </Heading>
+        <Heading size={2} fit caps textColor="tertiary">
+          defer something to get something sooner
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Integration Debt
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Deferring integration in favor of:
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Preventing defects from reaching production</ListItem>
+          <ListItem>Cleaning poorly factored code</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Integration Debt Interest
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Team member access to changes delayed</ListItem>
+          <ListItem>More likely to conflict when integrating</ListItem>
+        </List>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Incompatible?</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          CI and CI are less compatible
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          than is often understood
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          All hope
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          is not lost
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Assumptions
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Team trusts deployment process</ListItem>
+          <ListItem>Confidence in all changes before integration</ListItem>
+        </List>
       </Slide>
 
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">

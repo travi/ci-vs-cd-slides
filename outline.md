@@ -89,7 +89,16 @@
 * Integrate progress that doesn't make anything worse
   * Verifing correctness with automated tests can reduce the scope of
     meaningful progress since the UI doesnt have to be involved
-* Integrate dark
+* Integrate dark (separate release from integration/deployment)
+* Atomic contributions are popular in OSS. Shouldn't product teams learn from
+  OSS success?
+  * Important difference: drive-by contributors
+    * No guarantee that partial work will be completed, leaving maintainers to
+      decide whether to 
+      * complete abandoned work
+      * back it out
+      * maintain "dead" code until someone else finishes
+    * Branches are safer for OSS
 
 ### Manual Verification
 * Have enough automation to be confident about high-risk functionality
