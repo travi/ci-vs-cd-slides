@@ -329,6 +329,51 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} fit textColor="primary">
+          Often mis-defined as the steps carried out
+        </Heading>
+        <Heading size={2} fit caps textColor="tertiary">
+          by a &quot;Continuous Integration&quot; server
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          A &quot;Continuous Integration&quot; server
+        </Heading>
+        <Heading size={2} fit caps textColor="tertiary">
+          doesn&apos;t do the integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          A &quot;Continuous Integration&quot; server
+        </Heading>
+        <Heading size={2} fit caps textColor="tertiary">
+          ensures that integration happened
+          {' '}
+          <S type="italic">safely</S>
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Continuous Integration
+        </Heading>
+        <Heading size={2} fit caps textColor="tertiary">
+          makes the latest changes available
+        </Heading>
+        <Heading size={2} fit caps textColor="tertiary">
+          to team members in
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
           Written code, not yet in
           {' '}
           <Code style={codeStyle}>
