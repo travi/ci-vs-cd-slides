@@ -211,7 +211,7 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit>
+        <Heading size={1} fit textColor="primary">
           All necessary verification is done
         </Heading>
         <Heading size={2} fit textColor="tertiary">
@@ -226,8 +226,8 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit>
-          All that remains when approval is gen to deploy
+        <Heading size={1} fit textColor="primary">
+          All that remains when approval is given to deploy
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           is to actually deploy
@@ -253,7 +253,7 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit>
+        <Heading size={1} fit textColor="primary">
           Every commit to
           {' '}
           <Code style={codeStyle}>
