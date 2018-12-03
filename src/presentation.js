@@ -32,7 +32,8 @@ const codeStyle = {
   color: 'white'
 };
 const images = {
-  testInProduction: require('../assets/test-in-production.jpg')
+  testInProduction: require('../assets/test-in-production.jpg'),
+  deployOnFriday: require('../assets/its-friday-afternoon-deploy-all-things.jpg')
 };
 
 preloader(images);
@@ -298,10 +299,8 @@ export default function Presentation() {
         </List>
       </Slide>
 
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary">
-          Image about deploying on Friday afternoon?
-        </Heading>
+      <Slide bgColor="quaternary" transition={['slide']}>
+        <Image src={images.deployOnFriday.replace('/', '')} width="80%" />
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
