@@ -19,6 +19,8 @@
   * Focus on the goal of having confidence rather than how we get there
 * Automation, by itself, doesn't overcome the human fear
 
+* Pipeline stops before deploying if _anything_ fails
+
 ## Focusing on Automation/Metrics over Confidence
 * What is the value of the automation strategy that you follow?
 * What is the value of the metrics that you track?
@@ -99,6 +101,11 @@
       * back it out
       * maintain "dead" code until someone else finishes
     * Branches are safer for OSS
+    
+### Multiple Deployment Environments
+
+* Are multiple really needed?
+* Do they need to progress linearly?
 
 ### Manual Verification
 * Have enough automation to be confident about high-risk functionality
