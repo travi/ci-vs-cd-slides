@@ -582,12 +582,18 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous Deployment</Heading>
+        <Heading size={2} textColor="secondary" caps>vs</Heading>
+        <Heading size={1} textColor="primary" caps fit>Continuous Integration</Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
         <Heading size={1} textColor="primary" caps fit>Incompatible?</Heading>
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
-          CI and CI are less compatible
+          CI and CD are less compatible
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           than is often understood
@@ -627,11 +633,41 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
-          Assumptions
+          If We Assume
         </Heading>
         <List textColor="tertiary">
           <ListItem>Team trusts deployment process</ListItem>
           <ListItem>Confidence in all changes before integration</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Continuous Deployment
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          is Less Challenging Than Continuous Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Fear Makes it Difficult
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          to Integrate Continuously
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Integration Blockers
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Atomic Contributions</ListItem>
+          <ListItem>PR Review Gates</ListItem>
+          <ListItem>Manual Integration Testing</ListItem>
+          <ListItem>Manual Regression Testing</ListItem>
         </List>
       </Slide>
 
@@ -656,28 +692,294 @@ export default function Presentation() {
         </BlockQuote>
       </Slide>
 
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Make it Work</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Make It Work
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          And Prove It!
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          It Doesn&apos;t Work
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Unless Your Tests Prove It
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Code Reviews Should Not:
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Verify that the code works
+        </Heading>
+
+        <List textColor="tertiary">
+          <ListItem>Already proven by tests</ListItem>
+          <ListItem>Acceptance tests can be a collaborative effort</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Code Reviews Should Not:
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Verify that a Story is complete
+        </Heading>
+
+        <List textColor="tertiary">
+          <ListItem>Separate release from integration/deployment</ListItem>
+          <ListItem>Integrate early and often</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Something needs to go here
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          about atomic contributions and regression tests (ROI calculation changes)
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          PR Reviews Should
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Have High Priority
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Small PRs
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Are Far Easier to Review Effectively
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Small PRs
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Make It Expensive To Test Each Manually
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Small PRs
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Make Investing in Automated Test More Valuable
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          If it Works,
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Integrate It!
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          What about QA?
+        </Heading>
+
+        <Image src={images.killAllHumans.replace('/', '')} width="60%" />
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Since we&apos;re already confident
+        </Heading>
+
+        <List textColor="tertiary">
+          <ListItem>There are no regressions</ListItem>
+          <ListItem>The current change is either dark or passes acceptance tests</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Do we actually need a human
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          to verify the system further?
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={4} textColor="primary" fit>
+          &nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;
+        </Heading>
+        <Heading size={4} textColor="tertiary">
+          Exploratory Testing
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary">
+          Exploratory Testing
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Can be done after integration
+        </Heading>
+      </Slide>
+
       <Slide transition={['fade']} bgColor="quaternary" textColor="primary">
         <Image src={images.testInProduction.replace('/', '')} width="60%" />
       </Slide>
 
-      <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Make it Right</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Code Reviews Should Not:
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Nitpick code style
+        </Heading>
+
+        <List textColor="tertiary">
+          <ListItem>Use a linter</ListItem>
+          <ListItem>Favor consistency over personal preference</ListItem>
+          <ListItem>Add missing rules over time</ListItem>
+          <ListItem>Avoid wasting time on preferences that aren&apos;t worth a rule</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Code Reviews Should:
+        </Heading>
+
+        <List textColor="tertiary">
+          <ListItem>Share improved techniques</ListItem>
+          <ListItem>Suggest improved designs</ListItem>
+          <ListItem>Suggest consistent reuse</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Addressing Review Comments
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Can be Handled
+          {' '}
+          <S type="italic">After</S>
+          {' '}
+          Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Small PRs
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Can Make it Difficult for a Reviewer to not Block Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Can Code Reviews
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Be Done After Integration?
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Make it Fast</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Performance Optimizations
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Can be Integrated Separately
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Recommendations</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Implement
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Continuous Deployment
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Be Confident In All Changes
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Before Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Be Very Critical
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Of Tasks That Block Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Justify Investment In Automation
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          By Making Meaningful Improvements to Your Process
+        </Heading>
+      </Slide>
+
+      <Slide transition={['fade']} bgColor="quaternary" textColor="secondary">
         <Heading size={1} fit>
           Matt Travi
         </Heading>
 
         <List>
           <ListItem>
-            <Link textColor="white" target="_blank" href="https://matt.travi.org">
+            <Link textColor="secondary" target="_blank" href="https://matt.travi.org">
               matt.travi.org
             </Link>
           </ListItem>
           <ListItem>
-            <Link textColor="white" target="_blank" href="https://twitter.com/mtravi">
+            <Link textColor="secondary" target="_blank" href="https://twitter.com/mtravi">
               twitter.com/mtravi
             </Link>
           </ListItem>
           <ListItem>
-            <Link textColor="white" target="_blank" href="https://ci-vs-cd.travi.org">
+            <Link textColor="secondary" target="_blank" href="https://ci-vs-cd.travi.org">
               ci-vs-cd.travi.org
             </Link>
           </ListItem>
