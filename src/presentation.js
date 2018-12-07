@@ -302,6 +302,15 @@ export default function Presentation() {
         </Heading>
       </Slide>
 
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Was the decision
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Intentional?
+        </Heading>
+      </Slide>
+
       <Slide transition={['zoom']} bgColor="tertiary">
         <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
         <Heading size={2} textColor="secondary" caps fit>Delivery</Heading>
@@ -413,6 +422,15 @@ export default function Presentation() {
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           triggers the deployment pipeline
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          No Human
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Interaction
         </Heading>
       </Slide>
 
@@ -604,6 +622,7 @@ export default function Presentation() {
             <List style={{marginLeft: 60}}>
               <ListItem>Are catastrophic problems covered?</ListItem>
               <ListItem>Aligned on risk/effort when avoiding certain problems?</ListItem>
+              <ListItem>Are we experimenting during high traffic periods?</ListItem>
             </List>
           </ListItem>
         </List>
