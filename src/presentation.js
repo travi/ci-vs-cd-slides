@@ -37,6 +37,7 @@ const images = {
   thatWord: require('../assets/that-word.jpg'),
   killAllHumans: require('../assets/kill-all-humans.png'),
   concurrentDeployments: require('../assets/concurrent-deployments.png'),
+  semanticReleaseLogo: require('../assets/semantic-release.png'),
   deployOnFriday: require('../assets/its-friday-afternoon-deploy-all-things.jpg'),
   whyNotBoth: require('../assets/why-not-both.gif'),
   testInProduction: require('../assets/test-in-production.jpg')
@@ -452,9 +453,19 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary">
-          Mention semantic-release/deployment of packages in addition to apps
+        <Heading size={1} textColor="primary" fit>
+          Continuous Publishing
         </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          New Package Version For Each User-facing Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="white">
+        <Heading size={3} textColor="secondary" caps fit>
+          Semantic Release
+        </Heading>
+        <Image src={images.semanticReleaseLogo.replace('/', '')} width="50%" />
       </Slide>
 
       <Slide transition={['zoom']} bgColor="tertiary">
