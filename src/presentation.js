@@ -592,6 +592,8 @@ export default function Presentation() {
             <List style={{marginLeft: 60}}>
               <ListItem>While you&apos;re determining your automation coverage</ListItem>
               <ListItem>Even after you&apos;re confident in your process</ListItem>
+              <ListItem>Unknown Gaps</ListItem>
+              <ListItem>Intentional Gaps</ListItem>
             </List>
           </ListItem>
         </List>
