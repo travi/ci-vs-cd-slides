@@ -37,8 +37,9 @@ const images = {
   thatWord: require('../assets/that-word.jpg'),
   killAllHumans: require('../assets/kill-all-humans.png'),
   concurrentDeployments: require('../assets/concurrent-deployments.png'),
-  testInProduction: require('../assets/test-in-production.jpg'),
-  deployOnFriday: require('../assets/its-friday-afternoon-deploy-all-things.jpg')
+  deployOnFriday: require('../assets/its-friday-afternoon-deploy-all-things.jpg'),
+  whyNotBoth: require('../assets/why-not-both.gif'),
+  testInProduction: require('../assets/test-in-production.jpg')
 };
 
 preloader(images);
@@ -105,10 +106,10 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['slide']} bgColor="secondary">
-        <Heading size={1} textColor="primary">
-          Slide about building enough confidence
+        <Heading size={1} textColor="primary" fit>
+          Fear Must Be Overcome
         </Heading>
-        <Heading size={1} textColor="primary">
+        <Heading size={2} textColor="tertiary" fit>
           to make them more compatible
         </Heading>
       </Slide>
@@ -167,7 +168,7 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} fit textColor="primary">
-          Often mis-defined as the steps carried out
+          Often misdefined as the steps carried out
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           by a &quot;Continuous Integration&quot; server
@@ -212,7 +213,7 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} fit textColor="primary">
-          Written code, not yet in
+          Working code, not yet in
           {' '}
           <Code style={codeStyle}>
             master
@@ -225,53 +226,67 @@ export default function Presentation() {
         </Heading>
       </Slide>
 
-      <Slide transition={['fade']}>
-        <Heading size={1} fit>
+      <Slide transition={['fade']} bgColor="quaternary">
+        <Heading size={1} fit textColor="secondary">
           Clarification about debt...
         </Heading>
       </Slide>
 
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Technical Debt Metaphor
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
+          Financial Debt
         </Heading>
-        <BlockQuote>
-          <Quote>
-            During the planning or execution of a software project, decisions are made to defer necessary work.
-          </Quote>
-          <Cite><a href="http://wiki.c2.com/?TechnicalDebt">C2 Wiki</a></Cite>
-        </BlockQuote>
+
+        <List textColor="tertiary">
+          <ListItem>Take out a loan</ListItem>
+          <ListItem>To make a large purchase</ListItem>
+          <ListItem>Defer payment of the full cost</ListItem>
+          <ListItem>By paying interest in addition to the full cost</ListItem>
+        </List>
       </Slide>
 
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
           Technical Debt
         </Heading>
-        <BlockQuote>
-          <Quote>
-            A big pile of deferred work can gum up a project
-          </Quote>
-          <Cite><a href="http://wiki.c2.com/?TechnicalDebt">C2 Wiki</a></Cite>
-        </BlockQuote>
+
+        <List textColor="tertiary">
+          <ListItem>
+            Defer
+            {' '}
+            <S type="italic">necessary</S>
+            {' '}
+            internal work
+          </ListItem>
+          <ListItem>To deliver a feature sooner</ListItem>
+          <ListItem>By potentially making future efforts slower</ListItem>
+        </List>
       </Slide>
 
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Debt Interest
-        </Heading>
-        There is a cost to leaving the debt in place
-      </Slide>
-
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary">
           Metaphor Confusion
         </Heading>
         <BlockQuote>
-          <Quote>
+          <Quote textColor="tertiary">
             ...you could write code poorly with the intention of doing a good job later...
           </Quote>
           <Cite><a href="http://wiki.c2.com/?WardExplainsDebtMetaphor">Ward Cunningham</a></Cite>
         </BlockQuote>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
+          Integration Debt
+        </Heading>
+
+        <List textColor="tertiary">
+          <ListItem>Defer Integration</ListItem>
+          <ListItem>To prevent defects from reaching production</ListItem>
+          <ListItem>Or to clean poorly factored code</ListItem>
+          <ListItem>By delaying team member access to latest changes</ListItem>
+          <ListItem>And increasing the changes of merge conflicts</ListItem>
+        </List>
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
@@ -285,29 +300,6 @@ export default function Presentation() {
         <Heading size={2} fit textColor="tertiary">
           defer something to get something else sooner
         </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          Integration Debt
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          Deferring integration in favor of:
-        </Heading>
-        <List textColor="tertiary">
-          <ListItem>Preventing defects from reaching production</ListItem>
-          <ListItem>Cleaning poorly factored code</ListItem>
-        </List>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          Integration Debt Interest
-        </Heading>
-        <List textColor="tertiary">
-          <ListItem>Team member access to changes delayed</ListItem>
-          <ListItem>More likely to conflict when integrating</ListItem>
-        </List>
       </Slide>
 
       <Slide transition={['zoom']} bgColor="tertiary">
@@ -376,15 +368,18 @@ export default function Presentation() {
         </figure>
       </Slide>
 
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Deployment
-        </Heading>
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
+        <Heading size={2} textColor="secondary" caps fit>Deployment</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} fit>
           <Code style={codeStyle}>
             master
           </Code>
-          {' '}
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
           <S type="italic">is</S>
           {' '}
           production
@@ -406,24 +401,6 @@ export default function Presentation() {
             </a>
           </figcaption>
         </figure>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
-        <Heading size={2} textColor="secondary" caps fit>Deployment</Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit>
-          <Code style={codeStyle}>
-            master
-          </Code>
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          <S type="italic">is</S>
-          {' '}
-          production
-        </Heading>
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
@@ -548,12 +525,38 @@ export default function Presentation() {
         </Heading>
       </Slide>
 
+      <Slide bgColor="white" transition={['slide']}>
+        <figure>
+          <Image src={images.whyNotBoth.replace('/', '')} width="100%" alt="Why not both?" />
+          <figcaption>
+            Image credit:
+            {' '}
+            <a
+              href="https://tenor.com/view/why-not-both-gif-11478682"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tenor
+            </a>
+          </figcaption>
+        </figure>
+      </Slide>
+
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
           Your Team Needs to Determine
         </Heading>
         <Heading size={2} textColor="tertiary" fit>
           What Gives You Enough Confidence
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Need something here about
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Emergency Deploys (and shortcuts taken)
         </Heading>
       </Slide>
 
@@ -759,6 +762,14 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
+        <Image src={require('../assets/warning.svg')} width="30%" />
+
+        <Heading size={2} fit textColor="primary">
+          Controversial / Extreme Suggestions Ahead
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
           Atomic Contributions
         </Heading>
@@ -787,6 +798,15 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
+          If the Story is not Complete
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          The Progress Should Not Be Visible to Users
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
           Small PRs
         </Heading>
         <Heading size={2} fit textColor="tertiary">
@@ -800,6 +820,15 @@ export default function Presentation() {
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           Integrate It!
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          If the Story is Complete
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Acceptance Tests Should Be Enabled
         </Heading>
       </Slide>
 
@@ -900,33 +929,6 @@ export default function Presentation() {
           <ListItem>Separate release from integration/deployment</ListItem>
           <ListItem>Integrate early and often</ListItem>
         </List>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          If the Story is not Complete
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          The Progress Should Not Be Visible to Users
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          If the Story is Complete
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          Acceptance Tests Should Be Enabled
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          PR Reviews Should
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          Have High Priority
-        </Heading>
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
@@ -1039,6 +1041,24 @@ export default function Presentation() {
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           Can Make it Difficult for a Reviewer to not Block Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          PR Reviews Should
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Have High Priority
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Code Reviewers Should Not
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Be Limited to Leads
         </Heading>
       </Slide>
 
