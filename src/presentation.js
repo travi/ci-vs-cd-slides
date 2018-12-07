@@ -86,7 +86,7 @@ export default function Presentation() {
 
       <Slide transition={['slide']} bgColor="secondary">
         <Heading size={1} textColor="primary">
-          Product:
+          Product / QA:
         </Heading>
         <List textColor="tertiary">
           <ListItem>Defects deployed to production</ListItem>
@@ -104,25 +104,18 @@ export default function Presentation() {
         </List>
       </Slide>
 
-      <Slide transition={['fade']}>
-        <Heading size={1} fit>
-          First, some terminology...
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary">
+          Slide about building enough confidence
+        </Heading>
+        <Heading size={1} textColor="primary">
+          to make them more compatible
         </Heading>
       </Slide>
 
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Integration
-        </Heading>
-        <Heading size={1} fit>
-          favoring code in
-          {' '}
-          <Code style={codeStyle}>
-            master
-          </Code>
-          {' '}
-          over long-lived branches
-        </Heading>
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
+        <Heading size={2} textColor="secondary" caps fit>Integration</Heading>
       </Slide>
 
       <Slide bgColor="white" transition={['slide']}>
@@ -157,270 +150,6 @@ export default function Presentation() {
             </a>
           </figcaption>
         </figure>
-      </Slide>
-
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Delivery
-        </Heading>
-        <Heading size={1} fit>
-          <Code style={codeStyle}>
-            master
-          </Code>
-          {' '}
-          is always deployable
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="white" transition={['slide']}>
-        <figure>
-          <Image src={images.ciCdCd.replace('/', '')} width="100%" />
-          <figcaption>
-            Image credit:
-            {' '}
-            <a
-              href="https://clm-consulting.com/services/it-transformations/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CLM Consulting
-            </a>
-          </figcaption>
-        </figure>
-      </Slide>
-
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Deployment
-        </Heading>
-        <Heading size={1} fit>
-          <Code style={codeStyle}>
-            master
-          </Code>
-          {' '}
-          <S type="italic">is</S>
-          {' '}
-          production
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="white" transition={['slide']}>
-        <figure>
-          <Image src={images.ciCdCd.replace('/', '')} width="100%" />
-          <figcaption>
-            Image credit:
-            {' '}
-            <a
-              href="https://clm-consulting.com/services/it-transformations/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CLM Consulting
-            </a>
-          </figcaption>
-        </figure>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
-        <Heading size={2} textColor="secondary" caps fit>Delivery</Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit>
-          <Code style={codeStyle}>
-            master
-          </Code>
-        </Heading>
-        <Heading size={2} textColor="tertiary" fit>
-          is always deployable
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit textColor="primary">
-          All necessary verification is done
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          <S type="italic">before</S>
-          {' '}
-          merging to
-          {' '}
-          <Code style={codeStyle}>
-            master
-          </Code>
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit textColor="primary">
-          All that remains when approval is given to deploy
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          is to actually deploy
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit textColor="primary">
-          Someone simply has to
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          hit the deploy button
-        </Heading>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
-        <Heading size={2} textColor="secondary" caps fit>Deployment</Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit>
-          <Code style={codeStyle}>
-            master
-          </Code>
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          <S type="italic">is</S>
-          {' '}
-          production
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit textColor="primary">
-          Every commit to
-          {' '}
-          <Code style={codeStyle}>
-            master
-          </Code>
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          triggers the deployment pipeline
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="quaternary" transition={['slide']}>
-        <figure>
-          <Image src={images.concurrentDeployments.replace('/', '')} width="100%" />
-          <figcaption>
-            Image credit:
-            {' '}
-            <a
-              href="https://go.cloudbees.com/docs/cloudbees-documentation/cookbook/book.html#_concepts"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CloudBees Documentation
-            </a>
-          </figcaption>
-        </figure>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Continuous Delivery</Heading>
-        <Heading size={2} textColor="secondary" caps>vs</Heading>
-        <Heading size={1} textColor="primary" caps fit>Continuous Deployment</Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary">
-          Goal:
-        </Heading>
-        <Heading size={2} textColor="tertiary" fit>
-          Strive for Continuous Deployment
-        </Heading>
-        <Heading size={2} textColor="tertiary" fit>
-          over Continuous Delivery
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit textColor="primary">
-          Build Confidence
-        </Heading>
-        <Heading size={2} fit textColor="primary">
-          through Automation
-        </Heading>
-        <List textColor="tertiary">
-          <ListItem>Repeatable process makes deploys non-events</ListItem>
-          <ListItem>Team trusts the process</ListItem>
-        </List>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} fit textColor="primary">
-          Humans and Computers
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          have different strengths
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="quaternary" transition={['slide']}>
-        <Image src={images.killAllHumans.replace('/', '')} width="70%" />
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary">
-          Mention semantic-release/deployment of packages in addition to apps
-        </Heading>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Confidence</Heading>
-      </Slide>
-
-      <Slide bgColor="quaternary" transition={['slide']}>
-        <Image src={images.deployOnFriday.replace('/', '')} width="70%" />
-      </Slide>
-
-      <Slide transition={['fade']} bgColor="secondary">
-        <Heading size={1} textColor="primary" caps>Confidence</Heading>
-
-        <List textColor="tertiary">
-          <ListItem>There is no &quot;right&quot; answer</ListItem>
-          <ListItem>Time &amp; experimentation required</ListItem>
-        </List>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Honesty</Heading>
-      </Slide>
-
-      <Slide transition={['slide']} bgColor="secondary">
-        <Heading size={1} textColor="primary" caps>Be Honest With the Team</Heading>
-
-        <List textColor="tertiary">
-          <ListItem>
-            Issues will make it to production
-
-            <List style={{marginLeft: 60}}>
-              <ListItem>While you&apos;re determining your automation coverage</ListItem>
-              <ListItem>Even after you&apos;re confident in your process</ListItem>
-            </List>
-          </ListItem>
-        </List>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Trust</Heading>
-      </Slide>
-
-      <Slide transition={['slide']} bgColor="secondary">
-        <Heading size={1} textColor="primary" caps>Trust</Heading>
-
-        <List textColor="tertiary">
-          <ListItem>Promise only what is realistic</ListItem>
-          <ListItem>Discuss decisions made about the process</ListItem>
-          <ListItem>Be sure team is aligned about strategy and trade-offs</ListItem>
-        </List>
-      </Slide>
-
-      <Slide transition={['zoom']} bgColor="tertiary">
-        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
-        <Heading size={2} textColor="secondary" caps fit>Integration</Heading>
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
@@ -582,12 +311,352 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
+        <Heading size={2} textColor="secondary" caps fit>Delivery</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          is always deployable
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          All necessary verification is done
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          <S type="italic">before</S>
+          {' '}
+          merging to
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          All that remains when approval to deploy is given
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          is to actually deploy
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Someone simply has to
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          hit the deploy button
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="white" transition={['slide']}>
+        <figure>
+          <Image src={images.ciCdCd.replace('/', '')} width="100%" />
+          <figcaption>
+            Image credit:
+            {' '}
+            <a
+              href="https://clm-consulting.com/services/it-transformations/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CLM Consulting
+            </a>
+          </figcaption>
+        </figure>
+      </Slide>
+
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Deployment
+        </Heading>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+          {' '}
+          <S type="italic">is</S>
+          {' '}
+          production
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="white" transition={['slide']}>
+        <figure>
+          <Image src={images.ciCdCd.replace('/', '')} width="100%" />
+          <figcaption>
+            Image credit:
+            {' '}
+            <a
+              href="https://clm-consulting.com/services/it-transformations/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CLM Consulting
+            </a>
+          </figcaption>
+        </figure>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous</Heading>
+        <Heading size={2} textColor="secondary" caps fit>Deployment</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit>
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          <S type="italic">is</S>
+          {' '}
+          production
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Every commit to
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          triggers the deployment pipeline
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="quaternary" transition={['slide']}>
+        <figure>
+          <Image src={images.concurrentDeployments.replace('/', '')} width="100%" />
+          <figcaption>
+            Image credit:
+            {' '}
+            <a
+              href="https://go.cloudbees.com/docs/cloudbees-documentation/cookbook/book.html#_concepts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CloudBees Documentation
+            </a>
+          </figcaption>
+        </figure>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary">
+          Mention semantic-release/deployment of packages in addition to apps
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Confidence</Heading>
+      </Slide>
+
+      <Slide bgColor="quaternary" transition={['slide']}>
+        <Image src={images.deployOnFriday.replace('/', '')} width="70%" />
+      </Slide>
+
+      <Slide transition={['fade']} bgColor="secondary">
+        <Heading size={1} textColor="primary" caps>Confidence</Heading>
+
+        <List textColor="tertiary">
+          <ListItem>There is no &quot;right&quot; answer</ListItem>
+          <ListItem>Time &amp; experimentation required</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Target Confidence
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Over Metrics
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Metrics can Result in
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          False Confidence
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Execution Coverage
+        </Heading>
+        <Heading size={2} textColor="tertiary">
+          vs
+        </Heading>
+        <Heading size={1} fit textColor="primary">
+          Assertion Coverage
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Are the Tests Actually
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Making Assertions Against the Behavior?
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Mutation Testing
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          or TDD
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Are the Seams Between the Units
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Protected from Independent Changes?
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Integration Testing
+        </Heading>
+        <Heading size={3} textColor="tertiary">
+          &amp;
+        </Heading>
+        <Heading size={1} textColor="primary" fit>
+          Contract Testing
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Your Team Needs to Determine
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          What Gives You Enough Confidence
+        </Heading>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Honesty</Heading>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary" caps>Be Honest With the Team</Heading>
+
+        <List textColor="tertiary">
+          <ListItem>
+            Issues will make it to production
+
+            <List style={{marginLeft: 60}}>
+              <ListItem>While you&apos;re determining your automation coverage</ListItem>
+              <ListItem>Even after you&apos;re confident in your process</ListItem>
+            </List>
+          </ListItem>
+        </List>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Trust</Heading>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary" caps>Trust</Heading>
+
+        <List textColor="tertiary">
+          <ListItem>Promise only what is realistic</ListItem>
+          <ListItem>Discuss decisions made about the process</ListItem>
+          <ListItem>Be sure team is aligned about strategy and trade-offs</ListItem>
+        </List>
+      </Slide>
+
+      <Slide transition={['slide']} bgColor="secondary">
+        <Heading size={1} textColor="primary" caps fit>Work Together</Heading>
+        <Heading size={2} textColor="primary" caps fit>to ensure strategies are aligned</Heading>
+
+        <List textColor="tertiary">
+          <ListItem>
+            Issues will make it to production
+
+            <List style={{marginLeft: 60}}>
+              <ListItem>Are catastrophic problems covered?</ListItem>
+              <ListItem>Aligned on risk/effort when avoiding certain problems?</ListItem>
+            </List>
+          </ListItem>
+        </List>
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
+        <Heading size={1} textColor="primary" caps fit>Continuous Delivery</Heading>
+        <Heading size={2} textColor="secondary" caps>vs</Heading>
+        <Heading size={1} textColor="primary" caps fit>Continuous Deployment</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary">
+          Goal:
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Strive for Continuous Deployment
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          over Continuous Delivery
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Build Confidence
+        </Heading>
+        <Heading size={2} fit textColor="primary">
+          through Automation
+        </Heading>
+        <List textColor="tertiary">
+          <ListItem>Repeatable process makes deploys non-events</ListItem>
+          <ListItem>Team trusts the process</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} fit textColor="primary">
+          Humans and Computers
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          have different strengths
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="quaternary" transition={['slide']}>
+        <Image src={images.killAllHumans.replace('/', '')} width="70%" />
+      </Slide>
+
+      <Slide transition={['zoom']} bgColor="tertiary">
         <Heading size={1} textColor="primary" caps fit>Continuous Deployment</Heading>
         <Heading size={2} textColor="secondary" caps>vs</Heading>
         <Heading size={1} textColor="primary" caps fit>Continuous Integration</Heading>
       </Slide>
 
-      <Slide transition={['zoom']} bgColor="tertiary">
+      <Slide transition={['zoom']} bgColor="secondary">
         <Heading size={1} textColor="primary" caps fit>Incompatible?</Heading>
       </Slide>
 
@@ -597,6 +666,15 @@ export default function Presentation() {
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           than is often understood
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Verifying Before Integration
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Usually Results in Integration Debt
         </Heading>
       </Slide>
 
@@ -637,7 +715,7 @@ export default function Presentation() {
         </Heading>
         <List textColor="tertiary">
           <ListItem>Team trusts deployment process</ListItem>
-          <ListItem>Confidence in all changes before integration</ListItem>
+          <ListItem>Team wants confidence in all changes before integration</ListItem>
         </List>
       </Slide>
 
@@ -652,7 +730,16 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
-          Fear Makes it Difficult
+          Automating Deployment After Each Integration
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Is Only a Technical Challenge
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Human Fear Makes it Difficult
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           to Integrate Continuously
@@ -666,9 +753,54 @@ export default function Presentation() {
         <List textColor="tertiary">
           <ListItem>Atomic Contributions</ListItem>
           <ListItem>PR Review Gates</ListItem>
-          <ListItem>Manual Integration Testing</ListItem>
+          <ListItem>Manual Acceptance Testing</ListItem>
           <ListItem>Manual Regression Testing</ListItem>
         </List>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Atomic Contributions
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Are Preferred in OSS Projects
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Shouldn&apos;t a Product Team
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Learn from OSS Best Practices?
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Product Teams Don&apos;t Have
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Drive-By Contributors
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Small PRs
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Are Far Easier to Review Effectively
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          If it Works,
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Integrate It!
+        </Heading>
       </Slide>
 
       <Slide transition={['fade']} bgColor="secondary" textColor="primary">
@@ -707,6 +839,33 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
+          Also Means
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          No Regressions
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Small PRs
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Make It Expensive To Test Each Manually
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Small PRs
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Make Investing in Automated Tests More Valuable
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
           It Doesn&apos;t Work
         </Heading>
         <Heading size={2} fit textColor="tertiary">
@@ -723,7 +882,8 @@ export default function Presentation() {
         </Heading>
 
         <List textColor="tertiary">
-          <ListItem>Already proven by tests</ListItem>
+          <ListItem>Verify behavior before pushing</ListItem>
+          <ListItem>Prove behavior through tests</ListItem>
           <ListItem>Acceptance tests can be a collaborative effort</ListItem>
         </List>
       </Slide>
@@ -744,10 +904,19 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
-          Something needs to go here
+          If the Story is not Complete
         </Heading>
         <Heading size={2} fit textColor="tertiary">
-          about atomic contributions and regression tests (ROI calculation changes)
+          The Progress Should Not Be Visible to Users
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          If the Story is Complete
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Acceptance Tests Should Be Enabled
         </Heading>
       </Slide>
 
@@ -757,33 +926,6 @@ export default function Presentation() {
         </Heading>
         <Heading size={2} fit textColor="tertiary">
           Have High Priority
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          Small PRs
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          Are Far Easier to Review Effectively
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          Small PRs
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          Make It Expensive To Test Each Manually
-        </Heading>
-      </Slide>
-
-      <Slide bgColor="secondary" transition={['slide']}>
-        <Heading size={1} textColor="primary" fit>
-          Small PRs
-        </Heading>
-        <Heading size={2} fit textColor="tertiary">
-          Make Investing in Automated Test More Valuable
         </Heading>
       </Slide>
 
@@ -806,7 +948,7 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
-          Since we&apos;re already confident
+          Since we&apos;re already confident that
         </Heading>
 
         <List textColor="tertiary">
@@ -872,9 +1014,9 @@ export default function Presentation() {
         </Heading>
 
         <List textColor="tertiary">
-          <ListItem>Share improved techniques</ListItem>
-          <ListItem>Suggest improved designs</ListItem>
-          <ListItem>Suggest consistent reuse</ListItem>
+          <ListItem>Ensure the team will understand the intent in the future</ListItem>
+          <ListItem>Share knowledge</ListItem>
+          <ListItem>Ask questions for better understanding</ListItem>
         </List>
       </Slide>
 
@@ -909,8 +1051,57 @@ export default function Presentation() {
         </Heading>
       </Slide>
 
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Don&apos;t Require Reviews
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Before Merging a PR
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Push Directly
+        </Heading>
+        <Heading size={2} fit textColor="primary">
+          to
+          {' '}
+          <Code style={codeStyle}>
+            master
+          </Code>
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Can Code Reviews
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Be Done While Writing the Code?
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          &nbsp;Pair&nbsp;
+        </Heading>
+        <Heading size={2} fit textColor="tertiary">
+          Programming
+        </Heading>
+      </Slide>
+
       <Slide transition={['zoom']} bgColor="tertiary">
         <Heading size={1} textColor="primary" caps fit>Make it Fast</Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          More of
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          the Same
+        </Heading>
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
@@ -940,7 +1131,20 @@ export default function Presentation() {
           Be Confident In All Changes
         </Heading>
         <Heading size={2} textColor="tertiary" fit>
-          Before Integration
+          <S type="italic">
+            Before
+          </S>
+          {' '}
+          Integration
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
+          Consider
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          Starting with Packages
         </Heading>
       </Slide>
 
@@ -955,10 +1159,19 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
+          Separate Code Reviews
+        </Heading>
+        <Heading size={2} textColor="tertiary" fit>
+          From PR Gates
+        </Heading>
+      </Slide>
+
+      <Slide bgColor="secondary" transition={['slide']}>
+        <Heading size={1} textColor="primary" fit>
           Justify Investment In Automation
         </Heading>
         <Heading size={2} textColor="tertiary" fit>
-          By Making Meaningful Improvements to Your Process
+          By Making Meaningful Optimizations to Your Process
         </Heading>
       </Slide>
 
