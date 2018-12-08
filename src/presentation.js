@@ -40,7 +40,8 @@ const images = {
   semanticReleaseLogo: require('../assets/semantic-release.png'),
   deployOnFriday: require('../assets/its-friday-afternoon-deploy-all-things.jpg'),
   whyNotBoth: require('../assets/why-not-both.gif'),
-  testInProduction: require('../assets/test-in-production.jpg')
+  testInProduction: require('../assets/test-in-production.jpg'),
+  greenkeeperKeeperLogo: require('../assets/greenkeeper-keeper.jpg')
 };
 
 preloader(images);
@@ -1249,6 +1250,34 @@ export default function Presentation() {
             </Link>
           </ListItem>
         </List>
+      </Slide>
+
+      <Slide bgColor="white">
+        <Heading size={3} textColor="secondary" caps fit>
+          Semantic Release
+        </Heading>
+
+        <Image src={images.semanticReleaseLogo.replace('/', '')} width="50%" />
+      </Slide>
+
+      <Slide bgColor="white">
+        <Heading size={3} textColor="#00c775" textFont="primary" caps fit>
+          Greenkeeper
+        </Heading>
+
+        <Image
+          src={require('../assets/greenkeeper.svg')}
+          width="50%"
+          style={{boxShadow: '0 0 5px 1px rgba(0,0,0,0.3)', borderRadius: '100%'}}
+        />
+      </Slide>
+
+      <Slide bgColor="white">
+        <Heading size={3} textColor="black" textFont="primary" caps fit>
+          Greenkeeper Keeper
+        </Heading>
+
+        <Image src={images.greenkeeperKeeperLogo.replace('/', '')} width="50%" />
       </Slide>
 
     </Deck>
