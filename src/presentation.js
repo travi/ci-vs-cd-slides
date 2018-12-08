@@ -582,10 +582,10 @@ export default function Presentation() {
 
       <Slide bgColor="secondary" transition={['slide']}>
         <Heading size={1} textColor="primary" fit>
-          Need something here about
+          Does Your Confidence Level Change
         </Heading>
         <Heading size={2} textColor="tertiary" fit>
-          Emergency Deploys (and shortcuts taken)
+          For Emergency Deployments?
         </Heading>
       </Slide>
 
