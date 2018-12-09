@@ -1,5 +1,7 @@
 # ci-vs-cd-slides
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/travi/ci-vs-cd-slides.svg)](https://greenkeeper.io/)
+
 Spectacle slide deck for talk about the conflict between CI and CD
 
 <!-- status badges -->
