@@ -33,7 +33,7 @@
     "@travi/babel-preset": "3.0.0",
     "@travi/eslint-config-travi": "1.7.0",
     "babel-loader": "8.0.5",
-    "babel-plugin-transform-react-remove-prop-types": "0.4.22",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.23",
     "ban-sensitive-files": "1.9.2",
     "chai": "4.2.0",
     "commitlint-config-travi": "1.2.35",
