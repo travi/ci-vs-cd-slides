@@ -55,7 +55,7 @@
     "webpack": "4.29.1",
     "webpack-cli": "3.1.2",
     "webpack-config-utils": "2.3.1",
-    "webpack-dev-server": "3.2.0"
+    "webpack-dev-server": "3.2.1"
   },
   "dependencies": {
     "normalize.css": "8.0.1",
