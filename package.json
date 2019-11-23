@@ -19,8 +19,8 @@
     "lint:sensitive": "ban",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "test:integration": "cucumber-js test/integration --require-module @babel/register --format-options '{\"snippetInterface\": \"async-await\"}'",
-    "predeploy": "run-s build",
-    "deploy": "netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=./lib/ --prod"
+    "predeploy:netlify": "run-s build",
+    "deploy:netlify": "netlify deploy --dir=./lib/ --prod"
   },
   "config": {
     "commitizen": {
