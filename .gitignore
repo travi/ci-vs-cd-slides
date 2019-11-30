@@ -3,5 +3,8 @@
 /coverage/
 /.nyc_output/
 /.netlify/
+/cypress/fixtures/
+/cypress/videos/
+/cypress/screenshots/
 
 .eslintcache
