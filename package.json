@@ -33,7 +33,7 @@
     }
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "7.7.5",
+    "@babel/plugin-transform-runtime": "7.7.6",
     "@babel/register": "7.7.4",
     "@travi/babel-preset": "3.0.8",
     "@travi/eslint-config": "1.0.28",
