@@ -33,15 +33,15 @@ const codeStyle = {
   background: 'transparent'
 };
 const images = {
-  ciCdCd: require('../assets/ci-cd-cd.png'),
-  thatWord: require('../assets/that-word.jpg'),
-  killAllHumans: require('../assets/kill-all-humans.png'),
-  concurrentDeployments: require('../assets/concurrent-deployments.png'),
-  semanticReleaseLogo: require('../assets/semantic-release.png'),
-  deployOnFriday: require('../assets/its-friday-afternoon-deploy-all-things.jpg'),
-  whyNotBoth: require('../assets/why-not-both.gif'),
-  testInProduction: require('../assets/test-in-production.jpg'),
-  greenkeeperKeeperLogo: require('../assets/greenkeeper-keeper.jpg')
+  ciCdCd: require('../assets/ci-cd-cd.png').default,
+  thatWord: require('../assets/that-word.jpg').default,
+  killAllHumans: require('../assets/kill-all-humans.png').default,
+  concurrentDeployments: require('../assets/concurrent-deployments.png').default,
+  semanticReleaseLogo: require('../assets/semantic-release.png').default,
+  deployOnFriday: require('../assets/its-friday-afternoon-deploy-all-things.jpg').default,
+  whyNotBoth: require('../assets/why-not-both.gif').default,
+  testInProduction: require('../assets/test-in-production.jpg').default,
+  greenkeeperKeeperLogo: require('../assets/greenkeeper-keeper.jpg').default
 };
 
 preloader(images);
