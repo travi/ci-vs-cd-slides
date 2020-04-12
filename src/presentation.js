@@ -795,7 +795,7 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="secondary" transition={['slide']}>
-        <Image src={require('../assets/warning.svg')} width="30%" />
+        <Image src={require('../assets/warning.svg').default} width="30%" />
 
         <Heading size={2} fit textColor="primary">
           Controversial / Extreme Suggestions Ahead
@@ -1266,7 +1266,7 @@ export default function Presentation() {
         </Heading>
 
         <Image
-          src={require('../assets/greenkeeper.svg')}
+          src={require('../assets/greenkeeper.svg').default}
           width="50%"
           style={{boxShadow: '0 0 5px 1px rgba(0,0,0,0.3)', borderRadius: '100%'}}
         />
