@@ -287,7 +287,7 @@ export default function Presentation() {
           <ListItem>To prevent defects from reaching production</ListItem>
           <ListItem>Or to clean poorly factored code</ListItem>
           <ListItem>By delaying team member access to latest changes</ListItem>
-          <ListItem>And increasing the changes of merge conflicts</ListItem>
+          <ListItem>And increasing the chances of merge conflicts</ListItem>
         </List>
       </Slide>
 
