@@ -21,7 +21,6 @@ Spectacle slide deck for talk about the conflict between CI and CD
 [![Conventional Commits][commit-convention-badge]][commit-convention-link]
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
-[![Greenkeeper badge](https://badges.greenkeeper.io/travi/ci-vs-cd-slides.svg)](https://greenkeeper.io/)
 [![Renovate][renovate-badge]][renovate-link]
 
 <!--contribution-badges end -->
