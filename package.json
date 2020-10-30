@@ -16,7 +16,7 @@
     "lint:js": "eslint . --cache",
     "disabled:lint:travis": "travis-lint .travis.yml",
     "lint:sensitive": "ban",
-    "test": "npm-run-all --print-label --parallel lint:* --parallel test:* generate:thumbnail",
+    "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "test:integration": "cucumber-js test/integration --require-module @babel/register --format-options '{\"snippetInterface\": \"async-await\"}'",
     "test:smoke": "start-server-and-test 'npm start' http://localhost:5000 cypress:run",
     "cypress:run": "cypress run",
@@ -24,7 +24,7 @@
     "prestart": "run-s build",
     "start": "serve lib/",
     "dev": "webpack-dev-server",
-    "predeploy:netlify": "run-s build",
+    "predeploy:netlify": "run-s build generate:thumbnail",
     "deploy:netlify": "netlify deploy --dir=./lib/ --prod",
     "generate:thumbnail": "start-server-and-test 'serve lib/' http://localhost:5000 'npx capture-website-cli http://localhost:5000 --output=lib/thumbnail.png'"
   },
