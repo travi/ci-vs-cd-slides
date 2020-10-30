@@ -14,7 +14,7 @@
     "build:dev": "webpack --env development",
     "lint:md": "remark . --frail",
     "lint:js": "eslint . --cache",
-    "lint:travis": "travis-lint .travis.yml",
+    "disabled:lint:travis": "travis-lint .travis.yml",
     "lint:sensitive": "ban",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:* generate:thumbnail",
     "test:integration": "cucumber-js test/integration --require-module @babel/register --format-options '{\"snippetInterface\": \"async-await\"}'",
