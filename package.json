@@ -26,7 +26,8 @@
     "dev": "webpack-dev-server",
     "predeploy:netlify": "run-s build generate:thumbnail",
     "deploy:netlify": "netlify deploy --dir=./lib/ --prod",
-    "generate:thumbnail": "start-server-and-test 'serve lib/' http://localhost:5000 'npx capture-website-cli http://localhost:5000 --output=lib/thumbnail.png'"
+    "generate:thumbnail": "start-server-and-test 'serve lib/' http://localhost:5000 'npx capture-website-cli http://localhost:5000 --output=lib/thumbnail.png'",
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
