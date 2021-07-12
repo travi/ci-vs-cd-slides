@@ -1,4 +1,7 @@
 {
-  "extends":["github>form8ion/renovate-config:js-app"],
+  "extends":[
+    "github>form8ion/renovate-config:js-app",
+    "github>travi/.github//.renovate/legacy-spectacle"
+  ],
   "ignoreDeps": ["spectacle"]
 }
