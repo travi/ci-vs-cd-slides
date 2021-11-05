@@ -18,7 +18,7 @@
     "lint:peer": "npm ls --production >/dev/null",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "test:integration": "cucumber-js test/integration --require-module @babel/register --format-options '{\"snippetInterface\": \"async-await\"}'",
-    "test:smoke": "start-server-and-test 'npm start' http://localhost:5000 cypress:run",
+    "test:smoke": "start-server-and-test 'npm start' http://localhost:3000 cypress:run",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
     "prestart": "run-s build",
@@ -26,7 +26,7 @@
     "dev": "webpack-dev-server",
     "predeploy:netlify": "run-s build generate:thumbnail",
     "deploy:netlify": "netlify deploy --dir=./lib/ --prod",
-    "generate:thumbnail": "start-server-and-test 'serve lib/' http://localhost:5000 'npx capture-website-cli http://localhost:5000 --output=lib/thumbnail.png'",
+    "generate:thumbnail": "start-server-and-test 'serve lib/' http://localhost:3000 'npx capture-website-cli http://localhost:3000 --output=lib/thumbnail.png'",
     "prepare": "husky install"
   },
   "config": {
@@ -59,7 +59,7 @@
     "raw-loader": "4.0.2",
     "remark-cli": "10.0.0",
     "remark-preset-lint-travi": "2.0.8",
-    "serve": "12.0.1",
+    "serve": "13.0.2",
     "start-server-and-test": "1.14.0",
     "style-loader": "2.0.0",
     "url-loader": "4.1.1",
