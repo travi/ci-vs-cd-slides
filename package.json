@@ -45,7 +45,7 @@
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "ban-sensitive-files": "1.9.18",
     "chai": "4.3.6",
-    "commitlint-config-travi": "1.4.10",
+    "commitlint-config-travi": "1.4.11",
     "@cucumber/cucumber": "8.1.2",
     "cypress": "9.6.0",
     "cz-conventional-changelog": "3.3.0",
