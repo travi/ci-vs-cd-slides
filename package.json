@@ -46,7 +46,7 @@
     "ban-sensitive-files": "1.9.18",
     "chai": "4.3.7",
     "commitlint-config-travi": "1.4.20",
-    "@cucumber/cucumber": "8.8.0",
+    "@cucumber/cucumber": "8.9.0",
     "cypress": "9.7.0",
     "cz-conventional-changelog": "3.3.0",
     "file-loader": "6.2.0",
