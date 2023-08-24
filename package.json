@@ -44,7 +44,7 @@
     "babel-loader": "8.3.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "ban-sensitive-files": "1.10.0",
-    "chai": "4.3.7",
+    "chai": "4.3.8",
     "commitlint-config-travi": "1.4.35",
     "@cucumber/cucumber": "9.4.0",
     "cypress": "9.7.0",
